@@ -1,0 +1,117 @@
+
+body{
+    background-color: #003366;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+img{
+    display: block; /*retira o espaço abaixo das imagens*/
+}
+
+h1{
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 0; /*retirando a margem de baixo*/
+}
+
+
+p{
+    margin: 0; /*retirando a margem de todos os lados*/
+    
+}
+
+form{
+    margin-top: 35px;
+}
+
+input{
+    width: 460px;
+    height: 35px;
+    /*faz com que os valores de largura e altura sejam respeitados mesmo com padding e borda*/  
+    box-sizing: border-box; 
+    border-radius: 3px; /*arredondar os cantos*/
+    border: 1px solid #CCCCCC;
+    margin-bottom: 15px;
+    margin-top: 6px;
+}
+
+button{
+    background-color: #003366;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 45px;
+    /*padding: 10px 45px 10px 45px; top right bottom left */
+    /*padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;*/
+    cursor: pointer;
+}
+
+/*ao passar o mouse no botão*/
+button:hover{
+    background-color: #FF3131;
+}
+
+
+
+#flex-center{    
+    height: 100vh; /*percentual de altura do navegador*/
+    display: flex;
+    align-items: center; /*alinhamento vertical*/
+    justify-content: center; /*alinhamento horizontal*/
+}
+
+#principal{
+    width: 1000px;
+    height: 560px;
+    background-color: #FFFFFF;
+    color: #666666;
+    
+    /*Flexbox (Conjunto de propridades CSS para layout)*/
+    display: flex;
+    align-items: center; /*alinhamento vertical dos itens*/
+    gap: 25px; /*espaçamento entre os itens*/
+    
+    /*
+    Centraliza horizontalmente
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 1000px){
+
+    #foto{
+        display: none; /*removendo o id*/
+    }
+
+    #principal{
+        width: 70%;
+        justify-content: center;
+    }
+
+    input{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 500px){
+
+    h1{
+        font-size: 28px;
+    }
+
+    #principal{
+        width: 80%;
+        height: auto;                
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+}
